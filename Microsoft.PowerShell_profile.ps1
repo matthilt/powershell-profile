@@ -203,9 +203,9 @@ function mkcd { param($dir) mkdir $dir -Force; Set-Location $dir }
 ### Quality of Life Aliases
 
 # Navigation Shortcuts
-function docs { Set-Location -Path $HOME\Documents }
+function docs { Set-Location -Path $([Environment]::GetFolderPath("MyDocuments")) }
 
-function dtop { Set-Location -Path $HOME\Desktop }
+function dtop { Set-Location -Path $([Environment]::GetFolderPath("Desktop")) }
 
 # Quick Access to Editing the Profile
 function ep { vim $PROFILE }
